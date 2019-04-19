@@ -16,7 +16,7 @@ ENV GOPATH=/go
 
 WORKDIR /go
 
-RUN mkdir /go/bin && curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+RUN mkdir /go/bin && curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh && ln -sf /go/bin/dep /usr/bin/dep
 
 COPY conf/site.conf /etc/nginx/conf.d/default.conf
 COPY conf/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
