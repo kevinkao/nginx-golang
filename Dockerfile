@@ -4,7 +4,9 @@ RUN apt-get update && apt-get install -y \
     curl \
     nginx \
     supervisor \
-    wget
+    wget \
+    git \
+    build-essential
 
 RUN cd /tmp && wget https://dl.google.com/go/go1.12.linux-amd64.tar.gz && \
     tar -xvf go1.12.linux-amd64.tar.gz && \
